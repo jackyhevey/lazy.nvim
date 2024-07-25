@@ -1,5 +1,61 @@
 # Changelog
 
+## [11.14.1](https://github.com/folke/lazy.nvim/compare/v11.14.0...v11.14.1) (2024-07-25)
+
+
+### Bug Fixes
+
+* **plugins:** "Vim:E150: Not a directory" on plugin update ([#1679](https://github.com/folke/lazy.nvim/issues/1679)) ([7108809](https://github.com/folke/lazy.nvim/commit/7108809ab18dc1b1e6f402b29e2e1d35a5d311d5))
+
+## [11.14.0](https://github.com/folke/lazy.nvim/compare/v11.13.5...v11.14.0) (2024-07-24)
+
+
+### Features
+
+* added `opts.git.cooldown` to allow updating plugins on slow connections. Fixes [#1656](https://github.com/folke/lazy.nvim/issues/1656) ([d5686ef](https://github.com/folke/lazy.nvim/commit/d5686efbd00942b3e38de7c08b8df69d961b02f0))
+* **plugin:** improve error handling and show better error message ([c02268a](https://github.com/folke/lazy.nvim/commit/c02268ac6e6aab92249d020d75efc588bd9d24fa))
+
+
+### Bug Fixes
+
+* **plugin:** make .lazy.lua work again ([b4a5a12](https://github.com/folke/lazy.nvim/commit/b4a5a1209e4c64fa67aedf721a383541a64056d1))
+
+## [11.13.5](https://github.com/folke/lazy.nvim/compare/v11.13.4...v11.13.5) (2024-07-22)
+
+
+### Bug Fixes
+
+* **health:** dont use vim.fn.system to get cmd versions ([7d29719](https://github.com/folke/lazy.nvim/commit/7d29719ade6f5a269e3b7d08b246641b5b079aaa))
+
+## [11.13.4](https://github.com/folke/lazy.nvim/compare/v11.13.3...v11.13.4) (2024-07-22)
+
+
+### Bug Fixes
+
+* **loader:** add plugins whose rtp got loaded early to start plugins ([34b0126](https://github.com/folke/lazy.nvim/commit/34b0126e5b3966f1dbe148d6f8450213115e76b2))
+* **loader:** explicitely set package.loaded.modname to nil to prevent recursive loading errors ([12f2c74](https://github.com/folke/lazy.nvim/commit/12f2c74244cc768d97c83972aa63722389b5d96d))
+
+## [11.13.3](https://github.com/folke/lazy.nvim/compare/v11.13.2...v11.13.3) (2024-07-21)
+
+
+### Reverts
+
+* fix(loader): add auto loaded module to package.loaded early to prevent require loops ([a692bf8](https://github.com/folke/lazy.nvim/commit/a692bf86883457f45fe3f773bfc8bc4d9e4b070c))
+
+## [11.13.2](https://github.com/folke/lazy.nvim/compare/v11.13.1...v11.13.2) (2024-07-21)
+
+
+### Bug Fixes
+
+* **loader:** add auto loaded module to package.loaded early to prevent require loops ([18d1c1b](https://github.com/folke/lazy.nvim/commit/18d1c1b47e175cd58dc12bf4792ef4e9a50505fa))
+
+## [11.13.1](https://github.com/folke/lazy.nvim/compare/v11.13.0...v11.13.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* **build:** only load the plugin before build for `:` build commands ([5bdb12a](https://github.com/folke/lazy.nvim/commit/5bdb12a038e5a72cc793f38893f1a9c9fb741759))
+
 ## [11.13.0](https://github.com/folke/lazy.nvim/compare/v11.12.0...v11.13.0) (2024-07-17)
 
 

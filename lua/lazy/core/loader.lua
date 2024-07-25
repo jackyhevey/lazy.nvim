@@ -161,7 +161,7 @@ function M.get_start_plugins()
   ---@type LazyPlugin[]
   local start = {}
   for _, plugin in pairs(Config.plugins) do
-    if plugin.lazy == false and not plugin._.loaded then
+    if not plugin._.loaded and (plugin._.rtp_loaded or plugin.lazy == false) then
       start[#start + 1] = plugin
     end
   end
@@ -552,6 +552,8 @@ function M.loader(modname)
   end
 
   if ret then
+    -- explicitly set to nil to prevent loading errors
+    package.loaded[modname] = nil
     M.auto_load(modname, ret.modpath)
     local mod = package.loaded[modname]
     if type(mod) == "table" then

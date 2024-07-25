@@ -41,6 +41,10 @@ M.defaults = {
       rate = 2,
       duration = 5 * 1000, -- in ms
     },
+    -- Time in seconds to wait before running fetch again for a plugin.
+    -- Repeated update/check operations will not run again until this
+    -- cooldown period has passed.
+    cooldown = 0,
   },
   pkg = {
     enabled = true,
@@ -235,7 +239,7 @@ function M.hererocks()
   return M.options.rocks.hererocks
 end
 
-M.version = "11.13.0" -- x-release-please-version
+M.version = "11.14.1" -- x-release-please-version
 
 M.ns = vim.api.nvim_create_namespace("lazy")
 
